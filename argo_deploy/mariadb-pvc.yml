@@ -4,6 +4,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: mariadb-data-pvc
+  annotations:
     # ArgoCD 전용 어노테이션 (선택 사항, kubectl로 배포 시 무시됨)
     argocd.argoproj.io/sync-wave: "1"  # 배포 순서: 1 (가장 먼저)
 spec:
